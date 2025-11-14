@@ -1,0 +1,635 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #F9F4F2;
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #282625;
+  --primary-foreground: #EBB459;
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+}
+
+.shapeSun{
+  /* position: absolute; */
+  position:relative;
+  /* position:fixed; */
+}
+
+.shapeSun::after{
+  background-image: url(../app/images/sunshape.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 200%;
+  /* positioned behind the text */
+  z-index: -1; 
+  /* with unset position */
+  /* left: -330; */
+  left:-12;
+  top: calc(100% - 1.5rem);
+  display: block;
+  /* position:relative; */
+  position:absolute;
+
+}
+/* 
+.shapeStar {
+  position: absolute;
+  width: 115%;
+  height: 20%;
+  background-image: url(../app/images/star-replacing.svg);
+  background-size: 90% 20%;
+  background-repeat: no-repeat;
+  top: calc(40% - 6rem);
+  left: 0; make sure it has a unit
+  z-index: -1;
+} */
+
+
+/* .shapeStar{
+  position:relative;
+}
+
+.shapeStar::after{
+  background-image: url(../app/images/shapeStar.svg);
+  background-image: url(../app/images/star-replacing.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 150%;
+  height: 150%;
+  z-index: -2; 
+  left: 15;
+  top: calc(100% - 2.5rem);
+  display: block;
+  position:absolute;
+
+  ✨ Spinning + breathing animation
+  animation: spin-breathe 20s linear infinite;
+  transform-origin: center center;
+} */
+
+@keyframes spin-breathe {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5); /* scale up slightly */
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* .shapeBlueOval{
+  position:relative;
+}
+
+.shapeBlueOval::after{
+  background-image: url(../app/images/blue-oval.svg);
+  background-size: 55% 35%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 55%;
+  height: 100%;
+  z-index: -1; 
+  left: 0;
+  top: calc(60% - 22rem);
+  display: block;
+  position:absolute;
+
+} */
+
+
+/* .shapeBrownOval{
+  position:relative;
+}
+
+.shapeBrownOval::after{
+  background-image: url(../app/images/brown-oval.svg);
+  background-size: 95% 15%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: -1; 
+  right: 0;
+  top: calc(100% - 12rem);
+  display: block;
+  position:absolute;
+} */
+
+.shapeBlueOval {
+  position: absolute; /* position relative to parent container */
+  width: 300px;
+  height: 200px;
+  background-image: url(../app/images/blue-oval.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 10%;
+  left: 5%;
+  z-index: -1; /* keep behind content */
+}
+
+
+.shapeBrownOval {
+  position: absolute;
+  width: 450px;
+  height: 120px;
+  background-image: url(../app/images/brown-oval.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 70%;
+  right: 0;
+  z-index: -1; /* behind content */
+}
+
+.shapeGreenOval {
+  position: absolute;
+  width: 300px; /* adjust as needed */
+  height: 150px; /* adjust as needed */
+  background-image: url(../app/images/green-oval.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 50%; /* replicate calc(100% - 22rem) */
+  right: 0;
+  z-index: -1; /* keep behind content */
+}
+
+.shapeYellowOval {
+  position: absolute;
+  width: 40%; /* adjust as needed */
+  height: 100%; /* adjust as needed */
+  background-image: url(../app/images/yellow-oval.svg);
+  background-size: 120% 20%;
+  background-repeat: no-repeat;
+  top: 70%; /* replicates calc(100% - 16rem) */
+  left: 0;
+  z-index: -1; /* keep behind content */
+}
+
+
+
+/* .shapeGreenOval{
+  position:relative;
+}
+
+.shapeGreenOval::after{
+  background-image: url(../app/images/green-oval.svg);
+  background-size: 80% 20%; 
+  x moves
+  y resizes the shape
+  background-repeat: no-repeat;
+  content: '';
+  width  moves left/right
+  width: 30%;
+  height resizes
+  height: 100%;
+  z-index: -1; 
+  right: 0;
+  top: calc(100% - 22rem);
+  display: block;
+  position:absolute;
+} */
+
+/* .shapeYellowOval{
+  position:relative;
+}
+
+.shapeYellowOval::after{
+  background-image: url(../app/images/yellow-oval.svg);
+  background-size: 55% 25%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 95%;
+  height: 80%;
+  z-index: -1; 
+  left: 0;
+  top: calc(100% - 16rem);
+  display: block;
+  position:absolute;
+} */
+
+.placeholderGreenShape{
+  position:relative;
+}
+
+.placeholderGreenShape::after{
+  background-image: url(../app/images/green.svg);
+  background-size: 100% 45%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: -1; 
+  right: 20;
+  top: calc(80% - 2.5rem);
+  display: block;
+  position:absolute;
+}
+
+.placeholderYellowShape{
+  position:relative;
+}
+
+.placeholderYellowShape::after{
+  background-image: url(../app/images/yellow.svg);
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: -2; 
+  left: 30;
+  top: calc(85% - 4rem);
+  display: block;
+  position:absolute;
+}
+
+.placeholderBlueShape{
+  position:relative;
+}
+
+.placeholderBlueShape::after{
+  background-image: url(../app/images/blue.svg);
+  background-size: 100% 45%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: -1; 
+  right: 20;
+  top: calc(80% - 2.5rem);
+  display: block;
+  position:absolute;
+}
+
+/* .shapeHandWritting{
+  position:relative;
+}
+
+.shapeHandWritting::after{
+  background-image: url(../app/images/handwriting.svg);
+  background-size: 120% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 180%;
+  height: 100%;
+  z-index: -2; 
+  left: 0;
+  top: calc(10% - 4rem);
+  display: block;
+  position:absolute;
+} */
+
+.shapeHandwriting {
+  position: absolute;
+  width: 105%;
+  height: 40%;
+  background-image: url(../app/images/handwriting.svg);
+  background-size: 130% 25%;
+  background-repeat: no-repeat;
+  top: calc(45% - 3rem);
+  left: 0;
+  z-index: -1;
+}
+
+
+.placeholderImageSize{
+  width: 100%;
+  height: 100%;
+}
+
+.PortfolioPicture{
+  width: 65%;
+  height: 65%;
+}
+
+.placeholderSocialMediaIconsSize{
+  width: 20%;
+  height: 20%;
+}
+
+
+.blueStar{
+  position:relative;
+}
+
+.blueStar::after{
+  background-image: url(../app/images/Misc_03.svg);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 30%;
+  height: 100%;
+  z-index: -1; 
+  left: -14;
+  top: calc(100% - 1.5rem);
+  display: block;
+  position:absolute;
+}
+
+.greenCrown{
+  position:relative;
+}
+
+.greenCrown::after{
+  background-image: url(../app/images/green-crown.svg);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 140%;
+  z-index: -1; 
+  left: -15;
+  top: calc(80% - 2rem);
+  display: block;
+  position:absolute;
+}
+
+.YellowShine{
+  position:relative;
+}
+
+.YellowShine::after{
+  background-image: url(../app/images/shine.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 100%;
+  height: 150%;
+  z-index: -1; 
+  left: -20;
+  top: calc(100% - 2.3rem);
+  display: block;
+  position:absolute;
+}
+
+.BlueStarPlaceholder{
+  position:relative;
+}
+
+.BlueStarPlaceholder::after{
+  background-image: url(../app/images/blue-star.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 30%;
+  height: 150%;
+  z-index: -1; 
+  left: -30;
+  top: calc(100% - 2.3rem);
+  display: block;
+  position:absolute;
+}
+
+.container {
+  position: relative;
+  width: 65%;
+  height: 100%;
+}
+
+.container:hover{
+  opacity:0.75;
+  cursor: pointer;
+}
+
+.container:active{
+  opacity:0.6;
+  transform: scale(0.95);
+}
+
+.socialMediaTabsContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialMediaTabsContainer::before{
+  /* background: url(../app/images/tabs-on-hover.png); */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;              /* size of the background */
+  height: 60px;
+  background: url(../app/images/tabs-on-hover.png) no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.3s ease;
+  z-index: -1;  
+}
+.socialMediaTabsContainer:hover::before{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+.socialMediaTabsContainer:active{
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.placeholderShape{
+  position:relative;
+}
+
+.placeholderShape::after{
+  background-image: url(../app/images/brown-oval.svg);
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: -2; 
+  left: 20;
+  top: calc(85% - 4rem);
+  display: block;
+  position:absolute;
+}
+
+/* Tabs on hover */
+.nav-button {
+  position: relative;
+  padding: 0.375rem 0.75rem; /* same as px-3 py-1.5 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: var(--accent-foreground);
+}
+
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: url(../app/images/tabs-on-hover.png) no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: -1;
+}
+
+.nav-button:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-button:active{
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.underlineShape{
+  position:relative;
+  display: inline-block; /* so it fits the text width only */
+}
+
+.underlineShape::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /*place underline at text bottom*/
+  width: 100%; /*matches the text width automatically*/
+  height: 0.5em; /*adjust based on your SVG height*/
+  background: url('../app/images/line-8.svg') no-repeat;
+  background-size: auto 100%; /*preserve aspect ratio (scale only height)*/
+  z-index: -1;
+}
+

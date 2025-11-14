@@ -1,0 +1,163 @@
+"use client";
+import { Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image"; 
+import { Button } from "@/components/ui/button"; 
+import { useRouter } from "next/navigation";
+import * as React from "react";
+import AloneMode from "@/sections/alone-mode/alone-mode-logo";
+import FunFactsGrid from "./fun-facts";
+import AboutDescription from "./about-description"
+import ProfilePicture from "@/sections/profile-image"
+
+const introVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
+
+
+const paragraphVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  },
+};
+
+export default function AboutMe() {
+  const router = useRouter();
+  return (
+    <div>
+
+      {/* Navbar */}
+      <div className="w-full border-b bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="mx-auto flex h-14 w-full max-w-screen-2xl items-center gap-3 px-8">
+          {/* Left: Label */}
+          <div className="text-base font-semobold sm:text-lg">
+            <span className="shapeSun">Maggie G.</span>
+          </div>
+
+          {/* Right: Tabs */}
+          <div className="flex items-center gap-3 ml-auto">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="nav-button"
+              onClick={() => router.push("/")}
+            >
+              Home
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="nav-button"
+              onClick={() => router.push("/about")}
+            >
+              About me
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main content */}
+      <main className="background-color">
+
+<div className="flex flex-col lg:flex-row items-start justify-between rounded-lg p-6 md:p-8 lg:p-10 gap-10 md:gap-16 lg:gap-20">
+
+<motion.div
+      className="flex flex-col lg:flex-row items-center justify-between rounded-lg p-8 gap-10 md:gap-16 lg:gap-20"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={introVariants}
+    >
+      <motion.div
+        className="w-full lg:w-1/2 flex flex-col gap-4"
+        variants={introVariants}
+      >
+        <motion.p variants={paragraphVariants} className="text-sm font-medium text-[#4B5161]">
+          Hi there and thank you for stopping by!
+        </motion.p>
+
+        <motion.h2 variants={paragraphVariants} className="text-[#4B5161]">
+          My name is Margarita (Maggie) and I’m an end-to-end designer based in Copenhagen, Denmark. 
+        </motion.h2>
+
+        <motion.p variants={paragraphVariants} className="text-[#4B5161]">
+          Currently, I'm a designer at Melatech where we create software that helps clinicians to register and follow up on skin cancer.
+        </motion.p>
+
+        <motion.p variants={paragraphVariants} className="text-[#4B5161]">
+          I’m curious by nature and love diving into complex problems, figuring out how people interact with technology and turning that into simple, intuitive solutions. Seeing an idea move from concept to something people actually use - and working with a team to get there - is what makes design exciting for me.
+        </motion.p>
+
+        <motion.p variants={paragraphVariants} className="text-[#4B5161]">
+          In design, I care about accessibility, clean interfaces and products that feel human. I like collaborating with diverse teams, testing assumptions and iterating until everything flows naturally.
+        </motion.p>
+
+        <motion.p variants={paragraphVariants} className="text-[#4B5161]">
+          When I’m not designing, I’m probably baking something sweet, playing board games with friends or getting hooked on true crime docs on Netflix.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className="w-full lg:w-1/2 flex justify-center items-center"
+        variants={paragraphVariants} 
+      >
+        <ProfilePicture />
+      </motion.div>
+    </motion.div>
+    </div>
+
+        {/* Additional sections */}
+        <div className="flex flex-col lg:flex-row items-start justify-between rounded-lg p-6 md:p-8 lg:p-10 gap-4 md:gap-16 lg:gap-20">
+        <div className="grid p-8 gap-12 font-[family-name:var(--font-geist-sans)]">
+
+          {/* How would I describe myselft?  */}
+          {/* z-[-1] */}
+
+
+          <div className="overflow-visible">
+  <AboutDescription/>
+</div>
+
+
+          {/* Random facts about me */}
+          <div>
+          <FunFactsGrid/>
+          </div>
+
+          </div>
+          </div>
+       
+      </main>
+
+      {/* Footer */}
+      <footer className="items-center justify-items-center p-8 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-center gap-4 font-[family-name:var(--font-geist-sans)]">
+          <div className="text-base font-semobold sm:text-lg">
+            <span className="shapeSun">Maggie G.</span>
+          </div>
+          <div className="font-medium">Let's connect!</div>
+
+          <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+            <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">
+              <Image src="/linkedin.svg" alt="LinkedIn logo" width={35} height={35} /> 
+            </a>
+
+            <div className="flex items-center justify-center">
+              <a className="socialMediaTabsContainer" href="mailto:maggiegenova@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Image aria-hidden src="/email.svg" alt="Email logo" width={40} height={40} /> 
+              </a>
+            </div>
+
+            <a className="socialMediaTabsContainer" href="https://github.com/maggiegenova" target="_blank" rel="noopener noreferrer">
+              <Image aria-hidden src="/github.svg" alt="GitHub logo" width={35} height={35} /> 
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
