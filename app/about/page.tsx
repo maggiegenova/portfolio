@@ -84,7 +84,7 @@ export default function AboutMe() {
         </motion.h2>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
-          Currently, I'm a designer at Melatech where we create software that helps clinicians to register and follow up on skin cancer.
+          Currently, I&apos;m a designer at Melatech where we create software that helps clinicians to register and follow up on skin cancer.
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
@@ -138,7 +138,7 @@ export default function AboutMe() {
           <div className="text-base font-semobold sm:text-lg">
             <span className="shapeSun">Maggie G.</span>
           </div>
-          <div className="font-medium">Let's connect!</div>
+          <div className="font-medium">Let&apos;s connect!</div>
 
           <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
             <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">

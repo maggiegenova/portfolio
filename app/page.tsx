@@ -141,7 +141,7 @@ export default function Home() {
     <div className="text-base font-semobold sm:text-lg">
             <span className="shapeSun">Maggie G.</span>
         </div>
-        <div className="font-medium">Let's connect!</div>
+        <div className="font-medium">Let&apos;s connect!</div>
         <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">
             <Image src="/linkedin.svg" alt="LinkedIn logo" width={35} height={35}/> 
