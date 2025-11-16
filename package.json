@@ -1,17 +1,17 @@
-
 {
   "homepage": "https://maggiegenova.github.io/my-project",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-  },
+  "dev": "next dev --turbopack",
+  "build": "next build",
+  "export": "next export",
+  "start": "next start",
+  "lint": "next lint",
+  "predeploy": "NEXT_PUBLIC_GITHUB_PAGES=true npm run build && npm run export",
+  "deploy": "gh-pages -d out"
+},
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-navigation-menu": "^1.2.14",
