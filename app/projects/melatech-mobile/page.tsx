@@ -83,7 +83,7 @@ export default function MelatechMobile() {
             animate="visible"
             custom={1}
           >
-            Check out my other projects while I get this one ready. But if you’re too curious, I can still give you a sneak peek on request. 👀
+            Check out my other projects while I get this one ready. But if you&apos;re too curious, I can still give you a sneak peek on request. 👀
           </motion.p>
         </div>
       </main>
@@ -94,7 +94,7 @@ export default function MelatechMobile() {
           <div className="text-base font-semobold sm:text-lg">
             <span className="shapeSun">Maggie G.</span>
           </div>
-          <div className="font-medium">Let's connect!</div>
+          <div className="font-medium">Let&apos;s connect!</div>
           <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
             <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">
               <Image src="/linkedin.svg" alt="LinkedIn logo" width={35} height={35} />

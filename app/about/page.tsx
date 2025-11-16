@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button"; 
 import { useRouter } from "next/navigation";
 import * as React from "react";
-import AloneMode from "@/sections/alone-mode/alone-mode-logo";
 import FunFactsGrid from "./fun-facts";
 import AboutDescription from "./about-description"
 import ProfilePicture from "@/sections/profile-image"
@@ -81,7 +80,7 @@ export default function AboutMe() {
         </motion.p>
 
         <motion.h2 variants={paragraphVariants} className="text-[#4B5161]">
-          My name is Margarita (Maggie) and I’m an end-to-end designer based in Copenhagen, Denmark. 
+          My name is Margarita (Maggie) and I&apos;m an end-to-end designer based in Copenhagen, Denmark. 
         </motion.h2>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
@@ -89,7 +88,7 @@ export default function AboutMe() {
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
-          I’m curious by nature and love diving into complex problems, figuring out how people interact with technology and turning that into simple, intuitive solutions. Seeing an idea move from concept to something people actually use - and working with a team to get there - is what makes design exciting for me.
+          I&apos;m curious by nature and love diving into complex problems, figuring out how people interact with technology and turning that into simple, intuitive solutions. Seeing an idea move from concept to something people actually use - and working with a team to get there - is what makes design exciting for me.
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
@@ -97,7 +96,7 @@ export default function AboutMe() {
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-[#4B5161]">
-          When I’m not designing, I’m probably baking something sweet, playing board games with friends or getting hooked on true crime docs on Netflix.
+          When I&apos;m not designing, I&apos;m probably baking something sweet, playing board games with friends or getting hooked on true crime docs on Netflix.
         </motion.p>
       </motion.div>
 

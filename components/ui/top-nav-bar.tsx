@@ -6,23 +6,6 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs";
 
-/**
- * TopNavBar
- * - Left: label/title
- * - Right: two (or more) tabs aligned to the right
- *
- * Usage:
- * <TopNavBar
- *   label="Dashboard"
- *   tabs={[
- *     { value: "overview", label: "Overview" },
- *     { value: "analytics", label: "Analytics" },
- *   ]}
- *   value={tab}
- *   onValueChange={setTab}
- * />
- */
-
 export type TopNavTab = {
   value: string;
   label: React.ReactNode;
@@ -45,7 +28,6 @@ export default function TopNavBar({
   label,
   tabs,
   value,
-  onValueChange,
   className,
   sticky = false,
 }: TopNavBarProps) {
@@ -82,53 +64,3 @@ export default function TopNavBar({
     </div>
   );
 }
-
-// --- Optional demo component ---
-// export function TopNavBarDemo() {
-//   const [tab, setTab] = React.useState("tab1");
-
-//   return (
-//     <div className="min-h-[40vh]">
-//       <TopNavBar
-//         label={<span className="select-none">My App</span>}
-//         tabs={[
-//           { value: "tab1", label: "Tab One" },
-//           { value: "tab2", label: "Tab Two" },
-//         ]}
-//         value={tab}
-//         onValueChange={setTab}
-//         sticky
-//       />
-
-//       <div className="mx-auto max-w-screen-2xl px-4 py-6 sm:px-6">
-//         {tab === "tab1" ? (
-//           <div className="text-sm text-muted-foreground">
-//             Content for Tab One
-//           </div>
-//         ) : (
-//           <div className="text-sm text-muted-foreground">
-//             Content for Tab Two
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-// <div className="flex items-center gap-3 ml-auto sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-//             <Button
-//               variant="ghost"
-//               size="sm"
-//               className="text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-//             >
-//               Home
-//             </Button>
-//             <Button
-//               size="sm"
-//               className="text-sm font-medium px-4 h-9 rounded-md shadow-sm"
-//             >
-//               About me
-//             </Button>
-//           </div>

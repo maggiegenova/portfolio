@@ -7,7 +7,6 @@ import HeyText from "@/sections/hey-text";
 import ProjectOneCard from "@/sections/project-one-card";
 import ProjectTwoCard from "@/sections/project-two-card";
 import ProjectThreeCard from "@/sections/project-three-card";
-import ProjectFourCard from "@/sections/project-four-card";
 import * as React from "react";
 
 const containerVariants: Variants = {

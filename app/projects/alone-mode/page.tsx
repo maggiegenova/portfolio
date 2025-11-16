@@ -17,11 +17,6 @@ const containerVariants: Variants = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
-};
-
 const introVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.2 } },
@@ -590,7 +585,7 @@ export default function AloneModePage() {
           <div className="text-base font-semobold sm:text-lg">
             <span className="shapeSun">Maggie G.</span>
           </div>
-          <div className="font-medium">Let's connect!</div>
+          <div className="font-medium">Let&apos;s connect!</div>
 
           <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
             <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">
