@@ -1,11 +1,8 @@
 import type { NextConfig } from "next";
 
-const isGithubPages = process.env.NEXT_PUBLIC_GITHUB_PAGES === "true";
-
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: isGithubPages ? "/my-project" : "",
-  assetPrefix: isGithubPages ? "/my-project/" : "",
+  output: "export", // enables static export
+  // any other config you already have
 };
 
 export default nextConfig;
