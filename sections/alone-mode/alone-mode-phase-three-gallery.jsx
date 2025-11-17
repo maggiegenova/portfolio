@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 import "./alone-mode-gallery.css";
+import aloneModeSolution from "../../app/images/alone-mode-solution.png";
+import bondTouch from "../../app/images/bond-touch.png";
+import challengeApplication from "../../app/images/challenge-application.png";
+import contentDigest from "../../app/images/content-digest.png";
+import ringLimiter from "../../app/images/ring-limiter.png";
+import sbsn from "../../app/images/sbsn.png";
 
 function AloneModeGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "/alone-mode-solution.png",
-    "/bond-touch.png",
-    "/challenge-application.png",
-    "/content-digest.png",
-    "/ring-limiter.png",
-    "/sbsn.png",
+    aloneModeSolution,
+    bondTouch,
+    challengeApplication,
+    contentDigest,
+    ringLimiter,
+    sbsn,
   ];
 
   return (
     <div>
       {/* Gallery grid */}
       <div className="gallery">
-        {images.map((src, index) => (
+        {images.map((img, index) => (
           <img
             key={index}
-            src={src}
+            src={img.src}
             alt={`Gallery ${index + 1}`}
             className="gallery-image"
-            onClick={() => setSelectedImage(src)}
+            onClick={() => setSelectedImage(img.src)}
           />
         ))}
       </div>

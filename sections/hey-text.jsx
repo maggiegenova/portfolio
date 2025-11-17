@@ -4,12 +4,7 @@ const HeyText = () => {
     return (
        <div>
         <h3 className="text-center text-lg font-normal my-4 max-w-lg mx-auto">
-{/*        
-        <motion.div
-  className="shapeStar"
-  animate={{ y: [0, -12, 0], x: [0, 2, 0] }}
-  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-/> */}
+
 Hey!
         </h3>
         <h2 className="text-center text-4xl font-normal">I'm Maggie.</h2>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import aloneModeTimelineImage from '../../app/images/timeline.png';
 
 function AloneModeTimeline() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ function AloneModeTimeline() {
   return (
     <>
       <motion.img
-        src="/timeline.png"
+        src={aloneModeTimelineImage.src}
         alt="Phase 1 - Timeline"
         className="w-[65%] h-auto block mx-auto cursor-pointer rounded-xl shadow-md"
         onClick={() => setIsOpen(true)}
@@ -25,7 +26,7 @@ function AloneModeTimeline() {
             onClick={() => setIsOpen(false)}
           >
             <motion.img
-              src="/timeline.png"
+              src={aloneModeTimelineImage.src}
               alt="Expanded Timeline"
               className="w-full max-w-[700px] h-auto mx-auto block"
               initial={{ scale: 0.8, opacity: 0 }}

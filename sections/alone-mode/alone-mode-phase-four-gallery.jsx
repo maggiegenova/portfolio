@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import "./alone-mode-gallery.css";
+import videoOne from "../../app/images/video-1.png";
+import videoTwo from "../../app/images/video-2.png";
+import videoThree from "../../app/images/video-3.png";
 
 function AloneModePhaseFour() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "/video-1.png",
-    "/video-2.png",
-    "/video-3.png",
+    videoOne,
+    videoTwo,
+    videoThree,
   ];
 
   return (
     <div>
       {/* Gallery grid */}
       <div className="gallery">
-        {images.map((src, index) => (
+        {images.map((img, index) => (
           <img
             key={index}
-            src={src}
+            src={img.src}
             alt={`Gallery ${index + 1}`}
             className="gallery-image"
-            onClick={() => setSelectedImage(src)}
+            onClick={() => setSelectedImage(img.src)}
           />
         ))}
       </div>

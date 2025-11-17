@@ -1,9 +1,10 @@
 import React from 'react';
+import ovalButtonIcon from '../app/images/oval-button.svg';
 
 function SeeCaseButton() {
   return (
     <div className="container">
-        <img src="/oval-button.svg" alt="See more button"/>
+        <img src={ovalButtonIcon.src} alt="See more button"/>
         <div className="centered font-semibold">See case</div>
 
 

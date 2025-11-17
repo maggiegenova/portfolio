@@ -1,8 +1,9 @@
 import React from 'react';
+import AloneModeLogo from '../../app/images/alone-mode.png';
 
 function AloneMode() {
   return (
-    <img className='placeholderImageSize' src="/alone-mode.png" alt="Alone Mode"/>
+    <img className='placeholderImageSize' src={AloneModeLogo.src} alt="Alone Mode"/>
     );
 }
 

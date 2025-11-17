@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import introImageSix from '../../app/images/intro-6.png';
 
 function AloneModeImage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ function AloneModeImage() {
   return (
     <>
       <motion.img
-        src="/intro-6.png"
+        src={introImageSix.src}
         alt="Emergency notification"
         className="w-[35%] h-auto block mx-auto cursor-pointer rounded-xl shadow-md"
         onClick={() => setIsOpen(true)}
@@ -25,7 +26,7 @@ function AloneModeImage() {
             onClick={() => setIsOpen(false)}
           >
             <motion.img
-              src="/intro-6.png"
+              src={introImageSix.src}
               alt="Emergency notification"
               className="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl"
               initial={{ scale: 0.8, opacity: 0 }}

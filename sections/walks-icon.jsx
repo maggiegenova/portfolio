@@ -1,8 +1,9 @@
 import React from 'react';
+import walkIcon from '../app/images/walk.svg';
 
 function WalksIcon() {
   return (
-    <img className='placeholderImageSize' src="/walk.svg" alt="Walks Icon"/>
+    <img className='placeholderImageSize' src={walkIcon.src} alt="Walks Icon"/>
     );
 }
 

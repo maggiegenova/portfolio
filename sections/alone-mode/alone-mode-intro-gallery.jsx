@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import "./alone-mode-gallery.css";
+import introImageOne from "../../app/images/intro-1.png";
+import introImageTwo from "../../app/images/intro-2.png";
+import introImageThree from "../../app/images/intro-3.png";
 
 function IntroGallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "/intro-1.png",
-    "/intro-2.png",
-    "/intro-3.png",
+    introImageOne,
+    introImageTwo,
+    introImageThree,
   ];
 
   return (
     <div>
       {/* Gallery grid */}
       <div className="gallery">
-        {images.map((src, index) => (
+        {images.map((img, index) => (
           <img
             key={index}
-            src={src}
+            src={img.src}
             alt={`Gallery ${index + 1}`}
             className="gallery-image"
-            onClick={() => setSelectedImage(src)}
+            onClick={() => setSelectedImage(img.src)}
           />
         ))}
       </div>

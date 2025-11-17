@@ -1,8 +1,9 @@
 import React from 'react';
+import hogwardsIcon from '../app/images/hogwards.svg';
 
 function HogwardsIcon() {
   return (
-    <img className='placeholderImageSize' src="/hogwards.svg" alt="Wizzard Icon"/>
+    <img className='placeholderImageSize' src={hogwardsIcon.src} alt="Wizzard Icon"/>
     );
 }
 
