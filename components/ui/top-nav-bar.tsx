@@ -18,9 +18,6 @@ export type TopNavBarProps = {
   value: string;
   onValueChange?: (value: string) => void;
   className?: string;
-  /**
-   * When true, the bar is fixed to the top with a subtle shadow.
-   */
   sticky?: boolean;
 };
 
