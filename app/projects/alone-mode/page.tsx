@@ -11,6 +11,7 @@ import IntroGallery from "@/sections/alone-mode/alone-mode-intro-gallery";
 import AloneModeHomePageGallery from "@/sections/alone-mode/alone-mode-home-page-gallery";
 import AloneModeImage from "@/sections/alone-mode/alone-mode-image";
 import { motion, Variants } from "framer-motion";
+import Footer from "@/sections/footer";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -580,30 +581,7 @@ export default function AloneModePage() {
       </main>
 
       {/* Footer */}
-      <footer className="items-center justify-items-center p-8 font-[family-name:var(--font-geist-sans)]">
-        <div className="flex flex-col items-center justify-center gap-4 font-[family-name:var(--font-geist-sans)]">
-          <div className="text-base font-semobold sm:text-lg">
-            <span className="shapeSun">Maggie G.</span>
-          </div>
-          <div className="font-medium">Let&apos;s connect!</div>
-
-          <div className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-            <a className="socialMediaTabsContainer" href="https://www.linkedin.com/in/margarita-genova/" target="_blank" rel="noopener noreferrer">
-              <Image src="/linkedin.svg" alt="LinkedIn logo" width={35} height={35} /> 
-            </a>
-
-            <div className="flex items-center justify-center">
-              <a className="socialMediaTabsContainer" href="mailto:maggiegenova@gmail.com" target="_blank" rel="noopener noreferrer">
-                <Image aria-hidden src="/email.svg" alt="Email logo" width={40} height={40} /> 
-              </a>
-            </div>
-
-            <a className="socialMediaTabsContainer" href="https://github.com/maggiegenova" target="_blank" rel="noopener noreferrer">
-              <Image aria-hidden src="/github.svg" alt="GitHub logo" width={35} height={35} /> 
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }
