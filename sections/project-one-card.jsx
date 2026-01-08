@@ -17,7 +17,7 @@ const ProjectOneCard = () => {
           </p>
 
           <h2 className="text-lg font-medium">
-            Dermloop - Designing seamless user experience for dermatologists when capturing skin cancer
+          Improving evaluation accuracy by solving duplicate record challenges in Dermloop
           </h2>
 
           <p className="text-sm text-[#4B5161]">

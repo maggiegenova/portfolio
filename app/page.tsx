@@ -37,7 +37,10 @@ export default function Home() {
     >
       <div className="mx-auto flex h-14 w-full max-w-screen-2xl items-center gap-3 px-4 sm:px-6">
         {/* Left: Label */}
-        <div className="text-base font-semobold sm:text-lg">
+        <div 
+        className="text-base font-semobold sm:text-lg cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={() => router.push("/")}
+        >
         {/* truncate */}
             <span className="shapeSun">Maggie G.</span>
         </div>

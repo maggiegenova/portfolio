@@ -38,9 +38,13 @@ export default function MelatechDesktop() {
       {/* Navbar */}
       <div className="w-full border-b bg-background sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <div className="mx-auto flex h-14 w-full max-w-screen-2xl items-center gap-3 px-8">
-          <div className="text-base font-semobold sm:text-lg">
+        <div 
+        className="text-base font-semobold sm:text-lg cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={() => router.push("/")}
+        >
+        {/* truncate */}
             <span className="shapeSun">Maggie G.</span>
-          </div>
+        </div>
           <div className="flex items-center gap-3 ml-auto">
             <Button variant="ghost" size="sm" className="nav-button" onClick={() => router.push("/")}>
               Home
