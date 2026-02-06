@@ -26,11 +26,11 @@ const ProjectTwoCard = () => {
           </p>
 
           <h2 className="text-lg font-medium">
-            Dermloop - SOR Integration – Reducing manual errors in clinical registration through better data design
+            Dermloop - Closing the communication gap: Redesigning follow-ups in teledermatology
           </h2>
 
           <p className="text-sm text-[#4B5161]">
-           Desktop | User research | Wireframes &amp; Prototyping | Project management
+           Desktop | User research | Wireframes &amp; Prototyping
           </p>
 
           <div className="mt-8">
