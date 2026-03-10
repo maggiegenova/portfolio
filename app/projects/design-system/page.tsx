@@ -110,7 +110,7 @@ export default function ProjectFourCard() {
               </motion.p>
 
               <motion.h2 variants={paragraphVariants} className="text-lg font-medium text-[#4B5161]">
-              Design System: Building and maintaining Dermloop's design system
+              Design System: Building and maintaining Dermloop&apos;s design system
               </motion.h2>
 
               <motion.p variants={paragraphVariants} className="text-[#4B5161]">
@@ -151,8 +151,8 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="The Problem: A world without rules" />
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              When I joined the team, I didn't just find a lack of components - I found "invisible friction." Because the platform was built by engineers without a design touch, every new feature was a guessing game.
-              I found ten different shades of gray, buttons with different rounded corners, and no rules for spacing. This wasn't just a visual mess - it was a speed problem. Developers were spending time debating hex codes instead of solving medical challenges. We were reinventing the wheel with every single task.
+              When I joined the team, I did&apos;t just find a lack of components - I found &quot;invisible friction.&quot; Because the platform was built by engineers without a design touch, every new feature was a guessing game.
+              I found ten different shades of gray, buttons with different rounded corners, and no rules for spacing. This wasn&apos;t just a visual mess - it was a speed problem. Developers were spending time debating hex codes instead of solving medical challenges. We were reinventing the wheel with every single task.
               </motion.p>
 
               <motion.div variants={paragraphVariants} className="text-base text-[#4B5161]">
@@ -173,7 +173,7 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="Technical Foundation: Basics aren’t basic" />
  
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              I knew that for a system to last, the foundations had to be bulletproof. I started by defining the <i>"Atomic"</i> level: colors, typography, and spacing.
+              I knew that for a system to last, the foundations had to be bulletproof. I started by defining the <i>&quot;Atomic&quot;</i> level: colors, typography, and spacing.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-lg font-medium text-[#4B5161] pt-4">
@@ -181,7 +181,7 @@ export default function ProjectFourCard() {
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-        Naming the variables was a process of trial and error. I didn't just name a color "blue-500" - I ended up creating semantic variables like <i>action-primary</i>. This means the name describes what the color does, not just how it looks.
+        Naming the variables was a process of trial and error. I didn&apos;t just name a color &quot;blue-500&quot; - I ended up creating semantic variables like <i>action-primary</i>. This means the name describes what the color does, not just how it looks.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-lg font-medium text-[#4B5161] pt-4">
@@ -189,7 +189,7 @@ export default function ProjectFourCard() {
         </motion.p>
 
         <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-        I also built <i>"Modes"</i> directly into these variables. Since some of our main components are used on different backgrounds based on the context, I created <i>Light</i> and <i>Dark</i> versions of them. By setting this up in Figma, a component now "knows" to switch its contrast automatically when moved from a white background to a dark sidebar. This removed the guesswork for the developers and kept our accessibility standards high.
+        I also built <i>&quot;Modes&quot;</i> directly into these variables. Since some of our main components are used on different backgrounds based on the context, I created <i>Light</i> and <i>Dark</i> versions of them. By setting this up in Figma, a component now &quot;knows&quot; to switch its contrast automatically when moved from a white background to a dark sidebar. This removed the guesswork for the developers and kept our accessibility standards high.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-lg font-medium text-[#4B5161] pt-4">
@@ -217,7 +217,7 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="The Hybrid Challenge: Bridging app & web" />
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              When I started, we didn't have a component library. I began by building every component from scratch to fit our specific needs. However, as the team grew, we realized we needed a more efficient way to build for the web.
+              When I started, we didn&apos;t have a component library. I began by building every component from scratch to fit our specific needs. However, as the team grew, we realized we needed a more efficient way to build for the web.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-lg font-medium text-[#4B5161] pt-4">
@@ -257,11 +257,11 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="Intuitive Components: Logic over pixels" />
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              I moved away from "static drawings" and started building Smart Components. For every element - from a simple button to a complex  card - I defined every possible state: Default, Hover, Active, Disabled, and Loading.
+              I moved away from  &quot;static drawings&quot; and started building Smart Components. For every element - from a simple button to a complex  card - I defined every possible state: Default, Hover, Active, Disabled, and Loading.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              I used Figma’s boolean properties and variants so the components were "defensive." This means they were built to be hard to break. If a developer needed a button with an icon, they didn't have to move pixels; they just toggled a switch in the properties panel.
+              I used Figma&apos;s boolean properties and variants so the components were &quot;defensive.&quot; This means they were built to be hard to break. If a developer needed a button with an icon, they didn&apos;t have to move pixels; they just toggled a switch in the properties panel.
               </motion.p>
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
@@ -280,7 +280,7 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="Governance: Maintaining the truth" />
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              A design system is only as good as its last update. To prevent "system bloat," I became the filter for every new request. I established a strict workflow:
+              A design system is only as good as its last update. To prevent &quot;system bloat,&quot; I became the filter for every new request. I established a strict workflow:
               </motion.p>
             <motion.div
         className="w-full flex justify-left items-center"
@@ -322,7 +322,7 @@ export default function ProjectFourCard() {
               <AnimatedHeading text="Reflection: The result of order" />
 
               <motion.p variants={paragraphVariants} className="text-base text-[#4B5161]">
-              The shift was profound. We moved from "building screens" to "assembling experiences."
+              The shift was profound. We moved from &quot;building screens&quot; to &quot;assembling experiences.&quot;
               </motion.p>
 
               <motion.div
@@ -333,7 +333,7 @@ export default function ProjectFourCard() {
             <li className="mb-2 tracking-[-.01em]">
                 <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
                 Speed:
-              </code> We no longer spend hours arguing over spacing or hex codes. We focus on the user’s clinical journey.
+              </code> We no longer spend hours arguing over spacing or hex codes. We focus on the users clinical journey.
             </li>
             <li className="mb-2 tracking-[-.01em]">
                 <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
@@ -343,7 +343,7 @@ export default function ProjectFourCard() {
             <li className="mb-2 tracking-[-.01em]">
                 <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
                 Language matters:
-              </code> Changing how we talked about UI - from "that blue box" to "the primary action component" - changed how the whole team approached building the product.
+              </code> Changing how we talked about UI - from &quot;that blue box&quot; to &quot;the primary action component&quot; - changed how the whole team approached building the product.
             </li>
         </ul> 
 
