@@ -1,46 +1,42 @@
 "use client";
-import React from 'react'
-import { Card } from "@/components/ui/card"
+import React from "react";
+import { Card } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
-import AloneMode from "@/sections/alone-mode/alone-mode-logo"
-import SeeCaseButton from "@/sections/see-case-button"
+import AloneMode from "@/sections/alone-mode/alone-mode-logo";
 
 const ProjectThreeCard = () => {
   const router = useRouter();
+
   return (
-    <Card className="border-0 shadow-none bg-transparent">
-      <div className="flex flex-col lg:flex-row items-start justify-between rounded-lg p-6 md:p-8 lg:p-10 gap-10 md:gap-16 lg:gap-20">
-        {/* Text */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-4">
-          <p className="text-sm font-medium text-[#4B5161]">
-            <span className="YellowShine">DTU</span>
-          </p>
+    <Card
+      onClick={() => router.push("/projects/alone-mode")}
+      className="
+        w-full cursor-pointer border border-gray-200 rounded-lg p-5 flex flex-col gap-4 shadow-md
+        bg-[#F5F1EE] transition-all duration-300 overflow-hidden
+        hover:bg-gradient-to-b from-[#EBB459]/40 to-gray-50
+      "
+    >
+      {/* Thumbnail */}
+      <div className="w-full rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center">
+        <AloneMode className="max-w-[85%] h-auto object-contain" />
+      </div>
 
-          <h2 className="text-lg font-medium">
-            Alone Mode - Breaking the cycle of addiction by design
-          </h2>
+      {/* Text content */}
+      <div className="flex flex-col gap-2">
+        <p className="text-sm font-normal mt-2 text-gray-500">
+          <span className="YellowShine">DTU</span>
+        </p>
 
-          <p className="text-sm text-[#4B5161]">
-            UX/UI Design | Wireframes &amp; Prototyping | Master thesis | CHI Paper
-          </p>
+        <h2 className="text-lg font-medium">
+          Alone Mode - Breaking the cycle of addiction by design
+        </h2>
 
-          <div className="mt-8">
-          <button onClick={() => router.push("/projects/alone-mode")}>
-              <SeeCaseButton />
-            </button>
-          </div>
-        </div>
-
-        {/* Image */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
-          {/* Add shape */}
-          <div>
-            <AloneMode />
-          </div>
-        </div>
+        <p className="text-base mt-1.5 text-gray-500">
+          UX/UI Design • Wireframes & Prototyping • Master thesis • CHI Paper
+        </p>
       </div>
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectThreeCard
+export default ProjectThreeCard;

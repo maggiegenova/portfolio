@@ -1,47 +1,46 @@
 "use client";
-import React from 'react'
-import { Card } from "@/components/ui/card"
+import React from "react";
+import { Card } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
-import MelatechLogo from "@/sections/melatech-logo"
-import SeeCaseButton from "@/sections/see-case-button"
+import DermloopDesktop from "@/sections/dermloop-desktop";
 
 const ProjectTwoCard = () => {
   const router = useRouter();
-  return (
-    <Card className="border-0 shadow-none bg-transparent">
-      <div className="flex flex-col lg:flex-row items-start justify-between rounded-lg p-6 md:p-8 lg:p-10 gap-10 md:gap-16 lg:gap-20">
-        
-        {/* Image - left on large screens */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center">
-          <div className="w-full">
-             {/* Add shape */}
-            <MelatechLogo />
-          </div>
-        </div>
 
-        {/* Text - right on large screens */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-4">
-          <p className="text-sm font-medium text-[#4B5161]">
+  return (
+      <Card
+        onClick={() => router.push("/projects/melatech-desktop")}
+        className="w-full cursor-pointer border border-gray-200 rounded-lg p-5 flex flex-col gap-4 shadow-md
+    bg-[#F5F1EE] transition-all duration-300 overflow-hidden
+    hover:bg-gradient-to-b from-[#EBB459]/40 to-gray-50
+  "
+        // cursor-pointer border border-gray-200 rounded-lg p-5 flex flex-col gap-4 shadow-sm bg-[#F9F4F2]/1 h-full"
+      >
+        {/* Thumbnail */}
+        <div className="w-full rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center">
+  <DermloopDesktop className="w-fill h-fill object-contain" />
+</div>
+
+        {/* Text content */}
+        <div className="flex flex-col gap-2 flex-grow">
+          <p className="text-sm font-normal mt-2 text-gray-500">
             <span className="greenCrown">Melatech ApS</span>
           </p>
 
-          <h2 className="text-lg font-medium">
+          <h2 className="text-lg font-medium ">
             Dermloop - Closing the communication gap: Redesigning follow-ups in teledermatology
           </h2>
 
-          <p className="text-sm text-[#4B5161]">
-           Desktop | User research | Wireframes &amp; Prototyping
+          <p className="text-base mt-1.5 text-gray-500">
+            Desktop • User research • Wireframes & Prototyping
           </p>
-
-          <div className="mt-8">
-          <button onClick={() => router.push("/projects/melatech-desktop")}>
-              <SeeCaseButton />
-            </button>
-          </div>
         </div>
-      </div>
-    </Card>
-  )
-}
 
-export default ProjectTwoCard
+        {/* <div className="pt-2">
+          <SeeCaseButton/>
+        </div> */}
+      </Card>
+  );
+};
+
+export default ProjectTwoCard;

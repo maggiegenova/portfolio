@@ -6,6 +6,7 @@ import HeyText from "@/sections/hey-text";
 import ProjectOneCard from "@/sections/project-one-card";
 import ProjectTwoCard from "@/sections/project-two-card";
 import ProjectThreeCard from "@/sections/project-three-card";
+import ProjectFourCard from "@/sections/project-four-card";
 import * as React from "react";
 import Footer from "@/sections/footer";
 
@@ -23,8 +24,9 @@ export default function Home() {
   const projects = [
     { component: ProjectOneCard, href: "/projects/melatech-mobile" },
     { component: ProjectTwoCard, href: "/projects/melatech-desktop" },
+    { component: ProjectFourCard, href: "/projects/design-system" },
     { component: ProjectThreeCard, href: "/projects/alone-mode" },
-    // { component: ProjectFourCard, href: "/projects/alone-mode" },
+  
   ];
   const router = useRouter();
   return (
@@ -119,20 +121,23 @@ export default function Home() {
         {/* </span> */}
 
 
-        <motion.div variants={containerVariants} className="grid p-8 gap-16 font-[family-name:var(--font-geist-sans)]">
-        {projects.map(({ component: ProjectComponent, href }, i) => (
-            <motion.div
-              key={i}
-              variants={containerVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="cursor-pointer"
-              onClick={() => router.push(href)}
-            >
-              <ProjectComponent />
-            </motion.div>
-          ))}
-        </motion.div>
+       <motion.div
+  variants={containerVariants}
+  className="grid grid-cols-1 sm:grid-cols-2 gap-8 p-8 items-stretch font-[family-name:var(--font-geist-sans)"
+  // grid grid-cols-1 sm:grid-cols-2 gap-8 p-8 font-[family-name:var(--font-geist-sans)]
+>
+{projects.map(({ component: ProjectComponent, href }, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 150, damping: 10 }}
+      className="cursor-pointer h-full"
+      onClick={() => router.push(href)}
+    >
+      <ProjectComponent />
+    </motion.div>
+  ))}
+</motion.div>
 
 
 

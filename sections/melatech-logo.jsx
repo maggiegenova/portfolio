@@ -1,5 +1,5 @@
 import React from 'react';
-import melaIcon from '../app/images/mela.png';
+import melaIcon from '../app/images/dermloop-mobile.png';
 
 function MelatechLogo() {
   return (
